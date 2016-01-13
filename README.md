@@ -72,43 +72,43 @@ publicinterfaceGeneralDAO{
   
 public<T> T find(Class<T> type,Serializable id);  
   
-        public<T> T[] find(Class<T> type,Serializable... ids);  
+        public <T> T[] find(Class<T> type,Serializable... ids);  
   
-        public<T> T getReference(Class<T> type,Serializable id);  
+        public <T> T getReference(Class<T> type,Serializable id);  
   
-        public<T> T[] getReferences(Class<T> type,Serializable... ids);  
+        public <T> T[] getReferences(Class<T> type,Serializable... ids);  
   
-        publicboolean save(Object entity);  
+        public boolean save(Object entity);  
   
-        publicboolean[] save(Object... entities);  
+        public boolean[] save(Object... entities);  
   
-        publicboolean remove(Object entity);  
+        public boolean remove(Object entity);  
   
-        publicvoid remove(Object... entities);  
+        public void remove(Object... entities);  
   
-        publicboolean removeById(Class<?> type,Serializable id);  
+        public boolean removeById(Class<?> type,Serializable id);  
   
-        publicvoid removeByIds(Class<?> type,Serializable... ids);  
+        public void removeByIds(Class<?> type,Serializable... ids);  
   
-        public<T>List<T> findAll(Class<T> type);  
+        public <T> List<T> findAll(Class<T> type);  
   
-        publicList search(ISearch search);  
+        public List search(ISearch search);  
   
-        publicObject searchUnique(ISearch search);  
+        public Object searchUnique(ISearch search);  
   
-        publicint count(ISearch search);  
+        public int count(ISearch search);  
   
-        publicSearchResult searchAndCount(ISearch search);  
+        public SearchResult searchAndCount(ISearch search);  
   
-        publicboolean isAttached(Object entity);  
+        public boolean isAttached(Object entity);  
   
-        publicvoid refresh(Object... entities);  
+        public void refresh(Object... entities);  
   
-        publicvoid flush();  
+        public void flush();  
   
-        publicFilter getFilterFromExample(Object example);  
+        public Filter getFilterFromExample(Object example);  
   
-        publicFilter getFilterFromExample(Object example,ExampleOptions options);
+        public Filter getFilterFromExample(Object example,ExampleOptions options);
 }
 
 ```
