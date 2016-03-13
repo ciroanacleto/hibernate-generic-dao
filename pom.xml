@@ -34,9 +34,9 @@
 	</modules>
 
 	<scm>
-		<connection>scm:svn:http://hibernate-generic-dao.googlecode.com/svn/trunk</connection>
-		<developerConnection>scm:svn:https://hibernate-generic-dao.googlecode.com/svn/trunk</developerConnection>
-		<url>http://hibernate-generic-dao.googlecode.com/svn/trunk</url>
+		<connection>scm:git:http://hibernate-generic-dao.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:https://github.com:ciroanacleto/hibernate-generic-dao</developerConnection>
+		<url>https://github.com:ciroanacleto/hibernate-generic-dao</url>
 	</scm>
 	<developers>
 		<developer>
@@ -111,4 +111,21 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.jdbc.url>jdbc:postgresql://nameless:5432/sonar</sonar.jdbc.url>
+				<sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
+				<sonar.jdbc.username>postgres</sonar.jdbc.username>
+				<sonar.jdbc.password>postgres</sonar.jdbc.password>
+				<!-- SERVER ON A REMOTE HOST -->
+				<sonar.host.url>http://nameless:9000/sonar</sonar.host.url>
+			</properties>
+		</profile>
+	</profiles>
 </project>
